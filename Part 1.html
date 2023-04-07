@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Tax Calculator</h1>
+        <table>
+            <tr>
+                <td><label for="roomRental">Room Rental:</label></td>
+                <td><input id="roomRental"></td>
+            </tr>
+            <tr>
+                <td><label for="food">Food:</label></td>
+                <td><input id="food"></td>
+            </tr>
+            <tr>
+                <td><label for="entertainment">Entertainment:</label></td>
+                <td><input id="entertainment"></td>
+            </tr>
+            <tr>
+                <td><label for="total">Total:</label></td>
+                <td id="total"></td>
+            </tr>
+            <tr>
+                <td><label for="totalAfterTax">Total After Taxes:</label></td>
+                <td id="totalAfterTax"></td>
+            </tr>
+        </table>
+        <button onclick="calculateTotal(document.getElementById('roomRental').value,document.getElementById('food').value,document.getElementById('entertainment').value)">Calculate Total</button>
+
+        <script>
+            //functions 
+            function calculateTotal(roomRental,food,entertainment) {
+                var roomRental = parseInt(document.getElementById('roomRental').value);
+                var food = parseInt(document.getElementById('food').value);
+                var entertainment = parseInt(document.getElementById('entertainment').value);
+                total = (roomRental + food + entertainment); 
+                totalAfterTax = (total * 1.13);
+                document.getElementById('total').innerHTML = total;
+                document.getElementById('totalAfterTax').innerHTML = totalAfterTax;
+            }
+        </script>
+    </body>
+</html>
