@@ -12,10 +12,10 @@
         <button onclick="hideCapital()">Hide Capital Name</button>
         <br>
         <br>
-        <button id="showCapital">Show Capital Name</button>
+        <button onclick="showCapital()">Show Capital Name</button>
         <br>
         <br>
-        <button>Toggle</button>
+        <button onclick="toggleButton()">Toggle</button>
         
         <h1>Hover on this paragraph for Yellow</h1>
         <h1>Click on this paragraph for Green example.</h1>
@@ -26,7 +26,16 @@
                 hide.style.display = "none";
             }
             function showCapital() {
-                
+                var show = document.getElementById('capital');
+                show.style.display = "block";
+            }
+            function toggleButton() {
+                var toggle = document.getElementById('capital');
+                if (toggle.style.display === "none") {
+                    toggle.style.display = "block";
+                }else {
+                    toggle.style.display = "none";
+                }
             }
         </script>
     </body>
