@@ -17,8 +17,8 @@
         <br>
         <button onclick="toggleButton()">Toggle</button>
         
-        <h1>Hover on this paragraph for Yellow</h1>
-        <h1>Click on this paragraph for Green example.</h1>
+        <h1 id="yellowText" onmouseover="hoverYellow()">Hover on this paragraph for Yellow</h1>
+        <h1 id="greenText" onclick="clickGreen()">Click on this paragraph for Green example.</h1>
 
         <script>
             function hideCapital() {
@@ -36,6 +36,14 @@
                 }else {
                     toggle.style.display = "none";
                 }
+            }
+            function hoverYellow() {
+                var hover = document.getElementById('yellowText');
+                hover.style.color = "yellow"; 
+            }
+            function clickGreen() {
+                var click = document.getElementById('greenText');
+                click.style.color = "green";
             }
         </script>
     </body>
